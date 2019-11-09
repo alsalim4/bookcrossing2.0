@@ -1,5 +1,6 @@
 package com.example.bookcrossing.presentation.auth
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,8 @@ import androidx.lifecycle.Observer
 import com.example.bookcrossing.R
 import com.example.bookcrossing.extensions.alert
 import com.example.bookcrossing.extensions.toast
+import com.example.bookcrossing.presentation.book.MainActivity
+import com.example.bookcrossing.presentation.genre.GenreListActivity
 import kotlinx.android.synthetic.main.activity_auth.*
 import kotlinx.android.synthetic.main.activity_auth.radioGroup
 import kotlinx.android.synthetic.main.activity_auth.signIn_radio_button
@@ -39,10 +42,11 @@ class AuthActivity : AppCompatActivity() {
                 editLogin.text.toString().trim(),
                 editText2.text.toString().trim()
             )
+            val loginIntent = Intent(this, GenreListActivity::class.java)
+            startActivity(loginIntent)
         }
         viewModel.loginLiveData.observe(this, Observer {
             toast(it)
-            setContentView(R.layout.activity_genres)
         })
         viewModel.registrationLiveData.observe(this, Observer {
             this.toast(it)

@@ -2,7 +2,7 @@ package com.example.bookcrossing.presentation.auth
 
 import androidx.lifecycle.MutableLiveData
 import com.example.bookcrossing.base.BaseViewModel
-import com.example.fundament.entities.User
+import com.example.bookcrossing.entities.User
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 
 class AuthViewModel(val repository: AuthRepository): BaseViewModel(){

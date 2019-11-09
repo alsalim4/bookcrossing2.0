@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+            <ImageButton
                     android:id="@+id/toolbarBackIcon"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,15 @@
                     android:textColor="@color/black"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_height="wrap_content"/>
-
+            <ImageView
+                    android:id="@+id/toolbarAcceptIcon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_arrow_forward_black_24dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -50,7 +58,7 @@
             android:layout_marginEnd="0dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            tools:listitem="@layout/item_choise_dilaog"
+            tools:listitem="@layout/item_genre"
             android:id="@+id/genresRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

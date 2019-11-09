@@ -1,10 +1,11 @@
 package com.example.bookcrossing.presentation.auth
 
 import com.example.bookcrossing.entities.AsyncResult
+import com.example.bookcrossing.entities.User
 import com.example.bookcrossing.extensions.authWithGoogle
 import com.example.bookcrossing.extensions.login
 import com.example.bookcrossing.extensions.register
-import com.example.fundament.entities.User
+
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
 
