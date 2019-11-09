@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
-import com.example.bookcrossing.presentation.book.MainActivity
 import kotlinx.android.synthetic.main.activity_genres.*
 
 class GenreListActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class GenreListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_genres)
         toolbarAcceptIcon.setOnClickListener{
-            val loginIntent = Intent(this, MainActivity::class.java)
+            val loginIntent = Intent(this, MenuActivity::class.java)
             startActivity(loginIntent)
         }
 
