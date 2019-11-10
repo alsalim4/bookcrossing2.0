@@ -10,7 +10,7 @@ data class Book(
     var photo: Int? = null,
     //var genre: List<GenreItem>? = null,
     //var owner: User? = null,
-    //var reader: User? = null,
+    var reader: User? = null,
     var taken: Boolean?=null,
     var rating: Float? = null
 )

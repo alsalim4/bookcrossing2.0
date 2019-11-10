@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.bookcrossing.presentation.book.HomeFragment
+import com.example.bookcrossing.presentation.notification.YourBooks_fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_menu.*
 
@@ -24,6 +25,7 @@ class MenuActivity : AppCompatActivity() {
         var selectedFragment: Fragment = HomeFragment()
         when (item.itemId) {
             R.id.navigation_home -> selectedFragment = HomeFragment()
+            R.id.navigation_community -> selectedFragment = YourBooks_fragment()
         }
         supportFragmentManager.beginTransaction()
             .replace(R.id.container_fragment, selectedFragment)

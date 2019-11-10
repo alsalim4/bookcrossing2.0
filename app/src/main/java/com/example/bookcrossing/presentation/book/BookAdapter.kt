@@ -25,11 +25,12 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
         holder.view.tvTitleBook.text = book.name
         holder.view.tvTitleBook.text = book.name
         if (book.taken==false){
-            holder.view.NOTtakenBtn.text="Available"
+            holder.view.NOTtakenBtn.text=" available"
         }
         else {
-            holder.view.NOTtakenBtn.text="Not available"
+            holder.view.NOTtakenBtn.text=" not available"
         }
+
             Glide.with(holder.view.context)
                .load(book.photo)
                .into(holder.view.ivBook)

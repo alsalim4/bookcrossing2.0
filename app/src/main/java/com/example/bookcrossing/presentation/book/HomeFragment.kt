@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
 
     private fun createBooks(): ArrayList<Book> {
         var booksArrayList = ArrayList<Book>()
-        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps, false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps, null,false, null))
         return booksArrayList
 
     }
