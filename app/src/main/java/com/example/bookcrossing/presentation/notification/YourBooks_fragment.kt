@@ -45,7 +45,6 @@ class YourBooks_fragment : Fragment(){
         val user= User("alsalim","baizhanovAlsalim","123",R.drawable.hpaps)
         booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps,user ,false, null))
         return booksArrayList
-
     }
 
     private fun showBooks(books: List<Book>) {

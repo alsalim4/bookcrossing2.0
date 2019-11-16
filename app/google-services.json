@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "816330763803-l39t7b6emrefkf2qm9ei8m7i12s7asjf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookcrossing",
+            "certificate_hash": "d681e755e6e1723957d1ebbc7be4584f9f5fe013"
+          }
+        },
+        {
           "client_id": "816330763803-lhvqg4i1euaqagu1subilclfsocf8du9.apps.googleusercontent.com",
           "client_type": 3
         }
