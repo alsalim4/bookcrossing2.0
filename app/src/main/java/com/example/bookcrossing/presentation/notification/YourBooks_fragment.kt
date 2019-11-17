@@ -42,7 +42,7 @@ class YourBooks_fragment : Fragment(){
     }
     private fun createBooks(): ArrayList<Book> {
         var booksArrayList = ArrayList<Book>()
-        val user= User("alsalim","baizhanovAlsalim","123",R.drawable.hpaps)
+        val user= User("1313132","alsalim","baizhanovAlsalim","123",R.drawable.hpaps)
         booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps,user ,false, null))
         return booksArrayList
     }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.bookcrossing.presentation.auth.AuthRepository
 import com.example.bookcrossing.presentation.book.HomeFragment
 import com.example.bookcrossing.presentation.notification.YourBooks_fragment
 import com.example.bookcrossing.presentation.profile.ProfileFragment

@@ -7,11 +7,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 
 class AuthViewModel(val repository: AuthRepository): BaseViewModel(){
 
-
     val registrationLiveData = MutableLiveData<String>()
 
     fun register(name: String, username: String, password: String) {
-        makeRequest({ repository.register(User(name, username, password)) }) { res ->
+        makeRequest({ repository.register(User(name = name, username = username, password = password)) }) { res ->
             unwrap(res) {
                 registrationLiveData.value = "Вы успешно зарегистрировались ${it.name}!"
             }
@@ -31,6 +30,7 @@ class AuthViewModel(val repository: AuthRepository): BaseViewModel(){
     fun login(username: String, password: String) {
         makeRequest({repository.login(username, password)}){ res->
             unwrap(res){
+                repository.saveUser()
                 loginLiveData.value = "Вы успешно авторизовались ${it.name}!"
             }
         }

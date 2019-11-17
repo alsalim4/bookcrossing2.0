@@ -1,5 +1,6 @@
 package com.example.bookcrossing.presentation.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.example.bookcrossing.MenuActivity
 
 import com.example.bookcrossing.entities.User
+import com.example.bookcrossing.presentation.auth.AuthActivity
+import com.example.bookcrossing.presentation.auth.AuthRepository
 import kotlinx.android.synthetic.main.profile_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -21,6 +25,11 @@ class ProfileFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        logoutBtn.setOnClickListener{
+            val loginIntent = Intent(context, AuthActivity::class.java)
+            viewModel.repository.logoutUser()
+            startActivity(loginIntent)
+        }
         viewModel.onViewInitizialized()
         initObservers()
     }
@@ -33,6 +42,7 @@ class ProfileFragment : Fragment(){
 
     private fun updateProfileUI(user : User) {
         nameEditText.text = user.name
+        emailEditText.text = user.username
     }
 
 }

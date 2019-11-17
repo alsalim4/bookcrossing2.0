@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
+import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
 import com.example.bookcrossing.extensions.alert
 import com.example.bookcrossing.extensions.toast
@@ -21,9 +22,13 @@ class AuthActivity : AppCompatActivity() {
     lateinit var viewModel: AuthViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.activity_auth)
         viewModel = getViewModel()
+        if (viewModel.repository.isUserLogged()) {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        setContentView(R.layout.activity_auth)
 
         lostPassword.setOnClickListener{
 

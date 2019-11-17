@@ -9,7 +9,8 @@ import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
 import kotlinx.android.synthetic.main.activity_genres.*
 
-class GenreListActivity : AppCompatActivity() {
+class
+GenreListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -81,6 +81,7 @@ suspend inline fun FirebaseAuth.register(user: User): AsyncResult<User> {
                     val id = it?.user?.uid.orEmpty()
                     App.firebaseUser = this@register.currentUser
                     App.user = user
+                    App.user?.id = id
                     FirebaseDatabase.getInstance().reference.child(Table.USER).child(id).setValue(user)
                     continuation.resume(AsyncResult.Success(user))
                 }.addOnFailureListener {
