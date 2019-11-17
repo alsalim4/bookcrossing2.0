@@ -3,6 +3,7 @@ package com.example.bookcrossing
 import com.example.bookcrossing.base.CoroutineProvider
 import com.example.bookcrossing.presentation.auth.AuthRepository
 import com.example.bookcrossing.presentation.auth.AuthViewModel
+import com.example.bookcrossing.presentation.profile.ProfileViewModel
 import com.example.bookcrossing.presentation.sample.SampleViewModel
 import com.example.fundament.presentation.sample.SampleRepository
 import com.google.firebase.auth.FirebaseAuth
@@ -36,6 +37,9 @@ val appModule = module {
         SampleViewModel(get())
     }
 
+    viewModel {
+        ProfileViewModel()
+    }
 
     viewModel {
         AuthViewModel(get())
