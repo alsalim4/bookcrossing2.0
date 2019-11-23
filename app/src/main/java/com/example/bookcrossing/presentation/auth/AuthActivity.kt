@@ -54,12 +54,7 @@ class AuthActivity : AppCompatActivity() {
         })
         viewModel.registrationLiveData.observe(this, Observer {
             this.toast(it)
-            setContentView(R.layout.activiry_regdonepage)
         })
-
-        /**
-         * для отоброжения ошибок
-         */
         viewModel.messageLiveData.observe(this, Observer {
             this.alert(message = it)
         })

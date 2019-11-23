@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_genres.*
 
 class
@@ -40,7 +42,7 @@ GenreListActivity : AppCompatActivity() {
         return GenresArrayList
     }
     private fun showGenres(genres: List<GenreItem>) {
-        genresRecyclerView.layoutManager = LinearLayoutManager(this)
+        genresRecyclerView.layoutManager = GridLayoutManager(this,2)
         genresRecyclerView.adapter = GenreAdapter(genres)
     }
 }
