@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
 import com.google.firebase.database.FirebaseDatabase
@@ -42,7 +43,7 @@ GenreListActivity : AppCompatActivity() {
         return GenresArrayList
     }
     private fun showGenres(genres: List<GenreItem>) {
-        genresRecyclerView.layoutManager = GridLayoutManager(this,2)
+        genresRecyclerView.layoutManager = GridLayoutManager(this,2) as RecyclerView.LayoutManager?
         genresRecyclerView.adapter = GenreAdapter(genres)
     }
 }

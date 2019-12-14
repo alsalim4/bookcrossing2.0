@@ -16,9 +16,8 @@
             android:title=""/>
     <item
             android:id="@+id/navigation_chat"
-            android:icon="@drawable/ic_chat_bubble_outline_black_24dp"
+            android:icon="@drawable/ic_favorite_black_24dp"
             android:title=""/>
-
     <item
             android:id="@+id/navigation_profile"
             android:icon="@drawable/ic_perm_identity_black_24dp"

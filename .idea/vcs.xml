@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/friendlychat-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/friendlychat-android/MyApplication/Firebase.CloudStorage.Dowloud.Upload" vcs="Git" />
   </component>
 </project>

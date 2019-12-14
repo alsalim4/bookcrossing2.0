@@ -22,6 +22,12 @@ class YourBooks_fragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        toolbarFind.setOnClickListener {
+            toolbarText.visibility=View.GONE
+            toolbarFind.visibility=View.GONE
+            toolbarEditText.visibility=View.VISIBLE
+
+        }
         radioGroupYourBooks.setOnCheckedChangeListener { radioGroup, i ->
             when(i){
                 R.id.yourBooks_radio_button -> {
@@ -43,7 +49,7 @@ class YourBooks_fragment : Fragment(){
     private fun createBooks(): ArrayList<Book> {
         var booksArrayList = ArrayList<Book>()
         val user= User("1313132","alsalim","baizhanovAlsalim","123",R.drawable.hpaps)
-        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps,user ,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.bukowski,user ,false, null))
         return booksArrayList
     }
 

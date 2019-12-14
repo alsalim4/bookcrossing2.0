@@ -14,7 +14,7 @@ import com.google.firebase.database.ValueEventListener
 
 class ProfileViewModel(val repository: AuthRepository) : BaseViewModel() {
     val profilelivedata = MutableLiveData<User>()
-    val ref = FirebaseDatabase.getInstance().reference.child(Table.USER).child(App.user?.id!!)
+    private val ref = FirebaseDatabase.getInstance().reference.child(Table.USER).child(App.user?.id!!)
 
     fun onViewInitizialized(){
         val postListener = object : ValueEventListener {

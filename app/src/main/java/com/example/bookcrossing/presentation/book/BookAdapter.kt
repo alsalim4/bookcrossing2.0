@@ -14,6 +14,7 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
             inflate(R.layout.item_book,parent,false))
     }
 
+
     override fun getItemCount()=books.size
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
@@ -36,5 +37,11 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
                .into(holder.view.ivBook)
     }
 
-    class BooksViewHolder (val view: View) : RecyclerView.ViewHolder(view)
+    interface OnItemClickListener {
+        fun onBookItemClicked(item: Book)
+    }
+
+    inner class BooksViewHolder (val view: View) : RecyclerView.ViewHolder(view){
+
+    }
 }

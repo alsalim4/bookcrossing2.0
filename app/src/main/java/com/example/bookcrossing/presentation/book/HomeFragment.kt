@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bookcrossing.R
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
@@ -21,13 +23,18 @@ class HomeFragment : Fragment() {
 
     private fun createBooks(): ArrayList<Book> {
         var booksArrayList = ArrayList<Book>()
-        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null, R.drawable.hpaps, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+        booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
+
         return booksArrayList
 
     }
-
     private fun showBooks(books: List<Book>) {
-        RecommendedRecycle.layoutManager = LinearLayoutManager(context)
+        RecommendedRecycle.layoutManager = GridLayoutManager(context,2)
         RecommendedRecycle.adapter = BookAdapter(books)
     }
 }
