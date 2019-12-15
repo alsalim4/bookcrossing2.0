@@ -27,11 +27,13 @@
         <activity
                 android:name=".presentation.sample.SampleActivity"
                 android:screenOrientation="portrait"/>
-
         <activity android:name=".presentation.genre.GenreListActivity"
                   android:theme="@style/AppTheme"/>
-
         <activity android:name=".MenuActivity"
+                  android:theme="@style/AppTheme"/>
+        <activity android:name=".presentation.book.BookActivity"
+                  android:theme="@style/AppTheme"/>
+        <activity android:name=".presentation.profile.ProfileActivity"
                   android:theme="@style/AppTheme"/>
     </application>
 

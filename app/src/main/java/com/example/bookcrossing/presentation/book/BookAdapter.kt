@@ -18,6 +18,7 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
     override fun getItemCount()=books.size
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
+
         val book=books[position]
         book.rating?.let {
             holder.view.rating.numStars = it.toInt()
@@ -35,10 +36,6 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
             Glide.with(holder.view.context)
                .load(book.photo)
                .into(holder.view.ivBook)
-    }
-
-    interface OnItemClickListener {
-        fun onBookItemClicked(item: Book)
     }
 
     inner class BooksViewHolder (val view: View) : RecyclerView.ViewHolder(view){

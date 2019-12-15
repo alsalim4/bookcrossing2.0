@@ -181,10 +181,10 @@
                                 android:layout_height="40dp"/>
 
                         <TextView
-                                android:id="@+id/authorTitle"
+                                android:id="@+id/OwnerTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Author"
+                                android:text="Owner"
                                 app:layout_constraintTop_toTopOf="@id/authorLogo"
                                 app:layout_constraintStart_toEndOf="@id/authorLogo"
                                 android:textColor="#000"
