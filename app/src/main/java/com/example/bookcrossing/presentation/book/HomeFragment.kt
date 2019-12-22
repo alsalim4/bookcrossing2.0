@@ -1,5 +1,6 @@
 package com.example.bookcrossing.presentation.book
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +8,23 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.bookcrossing.R
+import com.example.bookcrossing.entities.Sample
+import com.example.bookcrossing.presentation.genre.GenreListActivity
+import com.example.bookcrossing.presentation.profile.ProfileActivity
+import com.example.bookcrossing.presentation.sample.SampleAdapter
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.home_fragment.*
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(),BookAdapter.MyClickListener{
+    private var adapter: BookAdapter? = null
+
+    override fun onClick(item: Book) {
+        val loginIntent = Intent(context, BookActivity::class.java)
+        activity?.startActivity(loginIntent)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(com.example.bookcrossing.R.layout.home_fragment, container, false)
     }
@@ -34,9 +47,13 @@ class HomeFragment : Fragment() {
 
     }
     private fun showBooks(books: List<Book>) {
-        RecommendedRecycle.layoutManager = GridLayoutManager(context,2)
-        RecommendedRecycle.adapter = BookAdapter(books)
+        adapter = BookAdapter(books)
+        adapter?.setListener(this)
+        RecommendedRecycle.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+        RecommendedRecycle.adapter = adapter
+
     }
+
 }
 
 

@@ -52,39 +52,6 @@
                     android:layout_width="100dp"
                     android:layout_height="150dp"/>
 
-            <!--<TextView-->
-            <!--android:id="@+id/ownerTitle"-->
-            <!--app:layout_constraintTop_toBottomOf="@id/bookImg"-->
-            <!--app:layout_constraintStart_toStartOf="@id/bookImg"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--android:text="Owner of the book: "-->
-            <!--android:textColor="#ffff"-->
-            <!--android:textStyle="bold"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"/>-->
-
-            <!--<de.hdodenhof.circleimageview.CircleImageView-->
-            <!--android:id="@+id/avatarOwner"-->
-            <!--android:layout_marginStart="4dp"-->
-            <!--app:layout_constraintStart_toEndOf="@id/ownerTitle"-->
-            <!--app:layout_constraintTop_toTopOf="@id/ownerTitle"-->
-            <!--app:layout_constraintBottom_toBottomOf="@id/ownerTitle"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:src="@drawable/avatar_tmp"-->
-            <!--android:layout_width="36dp"-->
-            <!--android:layout_height="36dp"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/owner"-->
-            <!--app:layout_constraintStart_toEndOf="@id/avatarOwner"-->
-            <!--app:layout_constraintTop_toTopOf="@id/ownerTitle"-->
-            <!--android:text="Borya Borysov"-->
-            <!--android:textColor="#fff"-->
-            <!--android:layout_marginStart="4dp"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"/>-->
-
-
             <TextView
                     android:id="@+id/bookTitle"
                     app:layout_constraintStart_toEndOf="@id/bookImg"
@@ -194,8 +161,8 @@
 
                         <TextView
                                 android:id="@+id/author"
-                                app:layout_constraintTop_toBottomOf="@id/authorTitle"
-                                app:layout_constraintStart_toStartOf="@id/authorTitle"
+                                app:layout_constraintTop_toBottomOf="@id/OwnerTitle"
+                                app:layout_constraintStart_toStartOf="@id/OwnerTitle"
                                 android:text="BoryaBorsiov"
                                 android:layout_width="0dp"
                                 android:maxLines="1"

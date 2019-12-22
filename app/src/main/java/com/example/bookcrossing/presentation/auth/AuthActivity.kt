@@ -11,6 +11,7 @@ import com.example.bookcrossing.MenuActivity
 import com.example.bookcrossing.R
 import com.example.bookcrossing.extensions.alert
 import com.example.bookcrossing.extensions.toast
+import com.example.bookcrossing.presentation.book.BookActivity
 import com.example.bookcrossing.presentation.genre.GenreListActivity
 import kotlinx.android.synthetic.main.activity_auth.*
 import kotlinx.android.synthetic.main.activity_auth.radioGroup

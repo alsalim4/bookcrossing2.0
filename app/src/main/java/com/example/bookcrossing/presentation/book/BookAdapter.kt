@@ -8,17 +8,21 @@ import com.bumptech.glide.Glide
 import com.example.bookcrossing.R
 import kotlinx.android.synthetic.main.item_book.view.*
 
+
 class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.BooksViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BooksViewHolder {
         return BooksViewHolder(LayoutInflater.from(parent.context).
             inflate(R.layout.item_book,parent,false))
     }
+    private var listener: BookAdapter.MyClickListener? = null
 
 
+    fun setListener(link: BookAdapter.MyClickListener){
+        listener = link
+    }
     override fun getItemCount()=books.size
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
-
         val book=books[position]
         book.rating?.let {
             holder.view.rating.numStars = it.toInt()
@@ -36,9 +40,17 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
             Glide.with(holder.view.context)
                .load(book.photo)
                .into(holder.view.ivBook)
+
     }
 
     inner class BooksViewHolder (val view: View) : RecyclerView.ViewHolder(view){
-
+        init {
+            view.setOnClickListener{
+                listener?.onClick(books[adapterPosition])
+            }
+        }
+    }
+    interface MyClickListener{
+        fun onClick(item: Book)
     }
 }

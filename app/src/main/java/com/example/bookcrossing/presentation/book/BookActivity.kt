@@ -10,9 +10,9 @@ import com.example.bookcrossing.presentation.profile.ProfileActivity
 import kotlinx.android.synthetic.main.activity_book.*
 
 class BookActivity : AppCompatActivity(){
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book)
-        super.onCreate(savedInstanceState, persistentState)
         OwnerTitle.setOnClickListener {
             val loginIntent = Intent(this, ProfileActivity::class.java)
             startActivity(loginIntent)
