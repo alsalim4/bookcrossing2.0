@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.bookcrossing.presentation.auth.AuthRepository
+import com.example.bookcrossing.presentation.book.FavoriteFragment
 import com.example.bookcrossing.presentation.book.HomeFragment
 import com.example.bookcrossing.presentation.notification.YourBooks_fragment
 import com.example.bookcrossing.presentation.profile.ProfileFragment
@@ -30,6 +31,7 @@ class MenuActivity : AppCompatActivity() {
             R.id.navigation_home -> selectedFragment = HomeFragment()
             R.id.navigation_community -> selectedFragment = YourBooks_fragment()
             R.id.navigation_profile -> selectedFragment = ProfileFragment()
+            R.id.navigation_favorite -> selectedFragment = FavoriteFragment()
         }
         supportFragmentManager.beginTransaction()
             .replace(R.id.container_fragment, selectedFragment)

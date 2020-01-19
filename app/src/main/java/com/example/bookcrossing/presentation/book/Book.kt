@@ -1,7 +1,9 @@
 package com.example.bookcrossing.presentation.book
 
 import com.example.bookcrossing.entities.User
+import com.google.firebase.database.IgnoreExtraProperties
 
+@IgnoreExtraProperties
 data class Book(
     var name: String? = null,
     var isbn: String? = null,

@@ -40,7 +40,6 @@ class BookAdapter (val books:List<Book>): RecyclerView.Adapter<BookAdapter.Books
             Glide.with(holder.view.context)
                .load(book.photo)
                .into(holder.view.ivBook)
-
     }
 
     inner class BooksViewHolder (val view: View) : RecyclerView.ViewHolder(view){

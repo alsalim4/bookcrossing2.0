@@ -10,7 +10,7 @@
         android:visibility="visible">
 
     <TextView
-            android:text="Sign in"
+            android:text="Авторизация"
             android:textStyle="bold"
             android:textSize="24sp"
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                     android:paddingLeft="16dp"
                     android:paddingTop="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="Sign in"/>
+                    android:text="Авторизация"/>
 
             <RadioButton
                     android:id="@+id/singUp_radio_button"
@@ -83,7 +83,7 @@
 
                     android:button="@null"
                     android:textSize="14sp"
-                    android:text="Sing up"/>
+                    android:text="Регистрация"/>
 
         </RadioGroup>
 
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:hint="Login or e-mail"
+                    android:hint="Логин или эл.почту"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/edittextbackground"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -131,7 +131,7 @@
                     android:paddingTop="16dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="Password"
+                    android:hint="Пароль"
                     android:textStyle="normal"
                     android:id="@+id/editText2"/>
 
@@ -140,7 +140,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     android:textAllCaps="false"
-                    android:text="@string/sign_in"
+                    android:text="Авторизироваться"
                     android:layout_marginRight="40dp"
                     android:layout_marginLeft="40dp"
                     app:layout_goneMarginTop="16dp"
@@ -152,7 +152,7 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/editText2"/>
             <TextView
-                    android:text="Lost password?"
+                    android:text="Забыли пароль?"
                     android:textColor="#777f88"
                     android:textStyle="normal"
                     android:textSize="16dp"
@@ -166,7 +166,7 @@
                     android:background="@drawable/dotted"
             />
             <TextView
-                    android:text="or use social"
+                    android:text="или через социальные сети"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -223,7 +223,7 @@
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Your name"
+                    android:hint="Ваш никнейм"
                     android:layout_marginTop="80dp"
                     android:background="@drawable/edittextbackground"
                     app:layout_constraintTop_toTopOf="parent"
@@ -254,7 +254,7 @@
                     android:paddingTop="16dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="E-mail"
+                    android:hint="Эл.почта"
                     android:textStyle="normal"
                     android:id="@+id/editEmail" tools:ignore="DuplicateIds,NotSibling"/>
 
@@ -271,7 +271,7 @@
                     android:paddingTop="16dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="Password"
+                    android:hint="Пароль"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:textStyle="normal"
@@ -289,7 +289,7 @@
                     android:paddingTop="16dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="Confirm password"
+                    android:hint="Подтвердите пароль"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:textStyle="normal"

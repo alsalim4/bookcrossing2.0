@@ -1,15 +1,12 @@
 package com.example.bookcrossing.presentation.profile
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.bookcrossing.R
 import com.example.bookcrossing.presentation.book.Book
 import com.example.bookcrossing.presentation.book.BookAdapter
-import kotlinx.android.synthetic.main.activity_book.*
-import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.profile_activity.*
 
 class ProfileActivity : AppCompatActivity() {

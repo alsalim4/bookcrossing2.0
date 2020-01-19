@@ -14,11 +14,15 @@ import com.example.bookcrossing.entities.Sample
 import com.example.bookcrossing.presentation.genre.GenreListActivity
 import com.example.bookcrossing.presentation.profile.ProfileActivity
 import com.example.bookcrossing.presentation.sample.SampleAdapter
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment(),BookAdapter.MyClickListener{
     private var adapter: BookAdapter? = null
+
+    private lateinit var database: DatabaseReference
 
     override fun onClick(item: Book) {
         val loginIntent = Intent(context, BookActivity::class.java)
@@ -33,7 +37,6 @@ class HomeFragment : Fragment(),BookAdapter.MyClickListener{
         super.onViewCreated(view, savedInstanceState)
         showBooks(createBooks())
     }
-
     private fun createBooks(): ArrayList<Book> {
         var booksArrayList = ArrayList<Book>()
         booksArrayList.add(Book("Womens", "asdasda", "Charls Bukowsk", null,R.drawable.bukowski, null,false, null))
@@ -51,7 +54,6 @@ class HomeFragment : Fragment(),BookAdapter.MyClickListener{
         adapter?.setListener(this)
         RecommendedRecycle.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
         RecommendedRecycle.adapter = adapter
-
     }
 
 }
